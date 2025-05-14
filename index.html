@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust - Жестокий мир выживания</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div class="preloader">
+        <div class="rust-logo-loader">
+            <div class="gear">
+                <i class="fas fa-cog"></i>
+            </div>
+            <span>RUST</span>
+        </div>
+    </div>
+
+    <!-- Кнопка вверх -->
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Шапка -->
+    <header class="sticky-header">
+        <div class="container">
+            <div class="logo" data-text="RUST">
+                <img src="images/rust-logo.webp" alt="Rust Logo">
+                <span class="logo-text">RUST</span>
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> Об игре</a></li>
+                    <li><a href="#features" class="nav-link"><i class="fas fa-star"></i> Особенности</a></li>
+                    <li><a href="#guides" class="nav-link"><i class="fas fa-book"></i> Гайды</a></li>
+                    <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Галерея</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Контакты</a></li>
+                </ul>
+                
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>ВЫЖИВАНИЕ В МИРЕ RUST</h1>
+            <p>Где каждый день - это борьба за существование</p>
+            <div class="hero-buttons">
+                <a href="https://store.steampowered.com/app/252490/Rust/" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-steam"></i> Купить на Steam
+                </a>
+                <a href="#server" class="btn btn-secondary">
+                    <i class="fas fa-server"></i> Онлайн сервера
+                </a>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <span>Листайте вниз</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="videos/rust-bg.mp4" type="video/mp4">
+            <img src="images/rust-bg-fallback.jpg" alt="Rust Background">
+        </video>
+    </section>
+
+    <!-- О игре -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2 class="section-title">О ИГРЕ <span>RUST</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Rust - это multiplayer-игра на выживание, где единственная цель - выжить. Вам предстоит бороться с голодом, жаждой, холодом и... другими игроками.</p>
+                    <p>Стройте убежища, добывайте ресурсы, создавайте оружие и защищайте свою территорию. В этом мире доверять нельзя никому.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-value" id="online-count">0</div>
+                            <div class="stat-label">Игроков онлайн</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="server-info">
+                        <h3><i class="fas fa-server"></i> Официальный сервер</h3>
+                        <p><strong>IP:</strong> eu-long.rusticated.com:28010</p>
+                        <p><strong>Карта:</strong> Procedural</p>
+                        <p><strong>Вайп:</strong> Ежемесячно</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Особенности с аккордеоном --> <section id="features" class="features section dark-section"> <div class="container"> <h2 class="section-title">ОСНОВНЫЕ <span>ОСОБЕННОСТИ</span></h2> <div class="features-container"> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-home"></i> </div> <h3>Строительство баз</h3> <div class="feature-content"> <p>Создавайте укрепленные базы с системой привилегий, ловушками и системами хранения.</p> <button class="feature-more">Подробнее</button> </div> <div class="feature-details"> <p>В Rust вы можете строить сложные многоуровневые базы с использованием различных материалов (дерево, камень, метал, броня). Система строительства позволяет создавать уникальные конструкции для защиты от рейдов.</p> <ul> <li><i class="fas fa-check"></i> Планировка помещений</li> <li><i class="fas fa-check"></i> Системы турелей</li> <li><i class="fas fa-check"></i> Скрытые комнаты</li> <li><i class="fas fa-check"></i> Ловушки для злоумышленников</li> </ul> <button class="feature-less">Свернуть</button> </div> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-fist-raised"></i> </div> <h3>PvP и рейды</h3> <div class="feature-content"> <p>Сражайтесь с другими игроками и штурмуйте их базы, используя тактики и стратегии.</p> <button class="feature-more">Подробнее</button> </div> <div class="feature-details"> <p>Боевая система Rust включает различные виды оружия - от примитивного (луки, копья) до современного (автоматы, снайперские винтовки). Рейды - ключевой элемент игры, требующий подготовки и координации.</p> <ul> <li><i class="fas fa-check"></i> Разнообразное оружие</li> <li><i class="fas fa-check"></i> Тактические рейды</li> <li><i class="fas fa-check"></i> Броня и защита</li> <li><i class="fas fa-check"></i> Система рангов</li> </ul> <button class="feature-less">Свернуть</button> </div> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-tools"></i> </div> <h3>Крафтинг</h3> <div class="feature-content"> <p>Создавайте инструменты, оружие и предметы для выживания из добытых ресурсов.</p> <button class="feature-more">Подробнее</button> </div> <div class="feature-details"> <p>Система крафтинга в Rust обширна и включает сотни рецептов. Вы можете создавать все - от простого каменного топора до сложных автоматических турелей и вертолетов.</p> <ul> <li><i class="fas fa-check"></i> 500+ рецептов</li> <li><i class="fas fa-check"></i> Улучшение предметов</li> <li><i class="fas fa-check"></i> Специализированные рабочие станции</li> <li><i class="fas fa-check"></i> Система исследований</li> </ul> <button class="feature-less">Свернуть</button> </div> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-users"></i> </div> <h3>Кланы и группы</h3> <div class="feature-content"> <p>Объединяйтесь с другими игроками, чтобы увеличить шансы на выживание.</p> <button class="feature-more">Подробнее</button> </div> <div class="feature-details"> <p>Играть в Rust в одиночку сложно. Создавайте кланы, распределяйте роли и защищайте свою территорию вместе. Система кланов включает общие хранилища, чат и систему прав доступа.</p> <ul> <li><i class="fas fa-check"></i> До 8 игроков в клане</li> <li><i class="fas fa-check"></i> Общие хранилища</li> <li><i class="fas fa-check"></i> Система прав доступа</li> <li><i class="fas fa-check"></i> Клановые войны</li> </ul> <button class="feature-less">Свернуть</button> </div> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-random"></i> </div> <h3>Случайные события</h3> <div class="feature-content"> <p>Вертолеты, грузовые корабли и другие события приносят ценные ресурсы.</p> <button class="feature-more">Подробнее</button> </div> <div class="feature-details"> <p>Случайные события делают игру динамичной и непредсказуемой. Участвуйте в них, чтобы получить редкие ресурсы и предметы, но будьте готовы к сопротивлению других игроков.</p> <ul> <li><i class="fas fa-check"></i> Военные вертолеты</li> <li><i class="fas fa-check"></i> Грузовые корабли</li> <li><i class="fas fa-check"></i> Аирдропы</li> <li><i class="fas fa-check"></i> Подземные бункеры</li> </ul> <button class="feature-less">Свернуть</button> </div> </div> <div class="feature-card"> <div class="feature-icon"> <i class="fas fa-sync-alt"></i> </div> <h3>Ежемесячные вайпы</h3> <div class="feature-content"> <p>Каждый месяц серверы обнуляются, давая всем равные шансы.</p> <button class="feature-more">Подробнее</button> </div> <div class="feature-details"> <p>Система вайпов (полного обнуления) поддерживает баланс в игре. Каждый месяц все игроки начинают с нуля, что делает игру честной и динамичной.</p> <ul> <li><i class="fas fa-check"></i> Полный ресет мира</li> <li><i class="fas fa-check"></i> Сохранение скинов</li> <li><i class="fas fa-check"></i> Сезонные события</li> <li><i class="fas fa-check"></i> Обновления контента</li> </ul> <button class="feature-less">Свернуть</button> </div> </div> </div> </div> </section>
+
+    <!-- Гайды -->
+    <section id="guides" class="guides section">
+        <div class="container">
+            <h2 class="section-title">ГАЙДЫ <span>ДЛЯ НОВИЧКОВ</span></h2>
+            
+            <div class="tabs">
+                <div class="tab-header">
+                    <div class="tab-link active" data-tab="beginner">Основы</div>
+                    <div class="tab-link" data-tab="building">Строительство</div>
+                    <div class="tab-link" data-tab="pvp">PvP</div>
+                    <div class="tab-link" data-tab="resources">Ресурсы</div>
+                </div>
+                
+                <div class="tab-content active" data-tab="beginner">
+                    <div class="guide-card">
+                        <h3><i class="fas fa-running"></i> Первые шаги</h3>
+                        <p>1. Соберите камни и дерево для создания базовых инструментов</p>
+                        <p>2. Создайте каменный топор и каменную кирку</p>
+                        <p>3. Постройте небольшое убежище до наступления ночи</p>
+                        <p>4. Найдите еду и воду для поддержания здоровья</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3><i class="fas fa-shield-alt"></i> Безопасность</h3>
+                        <p>1. Избегайте других игроков в начале игры</p>
+                        <p>2. Стройте базу в скрытых местах</p>
+                        <p>3. Используйте шкафы для спавна</p>
+                        <p>4. Устанавливайте замки на двери и сундуки</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" data-tab="building">
+                    <div class="guide-card">
+                        <h3><i class="fas fa-house-damage"></i> Проектирование базы</h3>
+                        <p>1. Начните с небольшой 2x1 базы</p>
+                        <p>2. Используйте камень для стен и метал для дверей</p>
+                        <p>3. Добавьте воздушные шлюзы для защиты</p>
+                        <p>4. Создайте скрытые комнаты для ценных предметов</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3><i class="fas fa-lock"></i> Защита от рейдов</h3>
+                        <p>1. Используйте несколько слоев стен</p>
+                        <p>2. Устанавливайте турели в стратегических точках</p>
+                        <p>3. Создавайте ложные комнаты</p>
+                        <p>4. Разделяйте ресурсы между несколькими базами</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" data-tab="pvp">
+                    <div class="guide-card">
+                        <h3><i class="fas fa-crosshairs"></i> Основы PvP</h3>
+                        <p>1. Начинайте с лука - он тихий и эффективный</p>
+                        <p>2. Используйте укрытия и рельеф местности</p>
+                        <p>3. Атакуйте из засады - не вступайте в открытый бой</p>
+                        <p>4. Собирайте броню с убитых противников</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3><i class="fas fa-trophy"></i> Тактики рейдов</h3>
+                        <p>1. Разведка - изучите базу перед атакой</p>
+                        <p>2. Используйте взрывчатку для слабых стен</p>
+                        <p>3. Атакуйте ночью или во время событий</p>
+                        <p>4. Отвлекайте защитников ложными атаками</p>
+                    </div>
+                </div>
+                
+                <div class="tab-content" data-tab="resources">
+                    <div class="guide-card">
+                        <h3><i class="fas fa-mountain"></i> Добыча ресурсов</h3>
+                        <p>1. Камни - горы и скалистые местности</p>
+                        <p>2. Дерево - леса и рощи</p>
+                        <p>3. Метал - горные регионы, пещеры</p>
+                        <p>4. Сера - вулканические зоны</p>
+                    </div>
+                    
+                    <div class="guide-card">
+                        <h3><i class="fas fa-recycle"></i> Оптимальные маршруты</h3>
+                        <p>1. Планируйте маршрут от базы до ресурсов</p>
+                        <p>2. Используйте карту для отметки богатых зон</p>
+                        <p>3. Собирайте ресурсы ночью - меньше конкуренции</p>
+                        <p>4. Храните ресурсы в нескольких местах</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery" class="gallery section dark-section">
+        <div class="container">
+            <h2 class="section-title">ГАЛЕРЕЯ <span>ИГРЫ</span></h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gallery-base.webp" alt="База в Rust">
+                    <div class="gallery-overlay">
+                        <h3>База игроков</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-pvp.webp" alt="PvP в Rust">
+                    <div class="gallery-overlay">
+                        <h3>PvP сражение</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery-raid.webp" alt="Рейд в Rust">
+                    <div class="gallery-overlay">
+                        <h3>Рейд базы</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">ЗАДАТЬ <span>ВОПРОС</span></h2>
+            
+            <div class="contact-form">
+                <form id="question-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Ваш вопрос" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Отправить вопрос
+                    </button>
+                </form>
+                <div id="form-message"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Серверная статистика -->
+    <section id="server" class="server section dark-section">
+        <div class="container">
+            <h2 class="section-title">СТАТИСТИКА <span>СЕРВЕРА</span></h2>
+            
+            <div class="server-stats">
+                <div class="server-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Онлайн</h3>
+                        <div class="stat-value" id="server-online">0/100</div>
+                    </div>
+                </div>
+                
+                <div class="server-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Время до вайпа</h3>
+                        <div class="stat-value" id="wipe-timer">30 дней 00:00:00</div>
+                    </div>
+                </div>
+                
+                <div class="server-stat">
+                    <div class="stat-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>Карта</h3>
+                        <div class="stat-value">Procedural</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="server-ip">
+                <h3>Подключиться к серверу:</h3>
+                <div class="ip-box">
+                    <span id="server-ip">eu-long.rusticated.com:28010</span>
+                    <button class="btn-copy" onclick="copyServerIP()">
+                        <i class="fas fa-copy"></i> Копировать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/rust-logo.webp" alt="Rust Logo">
+                    <span>RUST</span>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h4>Навигация</h4>
+                        <ul>
+                            <li><a href="#about">Об игре</a></li>
+                            <li><a href="#features">Особенности</a></li>
+                            <li><a href="#guides">Гайды</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="links-column">
+                        <h4>Ресурсы</h4>
+                        <ul>
+                            <li><a href="https://rust.facepunch.com/" target="_blank">Официальный сайт</a></li>
+                            <li><a href="https://store.steampowered.com/app/252490/Rust/" target="_blank">Steam</a></li>
+                            <li><a href="https://rustlabs.com/" target="_blank">Rust Labs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Rust Fan Site. Неофициальный ресурс. Все права на игру принадлежат Facepunch Studios.</p>
+                <div class="footer-social">
+                    <a href="https://store.steampowered.com/app/252490/Rust/" target="_blank"><i class="fab fa-steam"></i></a>
+                    <a href="https://discord.gg/rust" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
